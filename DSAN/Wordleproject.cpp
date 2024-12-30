@@ -1,3 +1,6 @@
+//Finished the tutorial
+
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -139,12 +142,12 @@ int main() {
         toUpper(input);
 
         if (input == "Q") {
-            cout << "Game ended. Goodbye!" << endl;
+            cout << "Game ended" << endl;
             break;
         }
 
         if (!isvalid(input)) {
-            cout << "Invalid input! Guess must be " << wordlength << " uppercase letters." << endl;
+            cout << "Invalid  must be " << wordlength << " uppercase letters." << endl;
             continue;
         }
 
@@ -153,13 +156,13 @@ int main() {
         printwordle(guesses, matches, currenttry);
 
         if (isallmatch(targetword, input)) {
-            cout << "Congratulations! You found the word: " << targetword << endl;
+            cout << " found the word: " << targetword << endl;
             break;
         }
 
         currenttry++;
         if (currenttry == guessesnumber) {
-            cout << "You've used all attempts. The word was: " << targetword << endl;
+            cout << "Failed the word was: " << targetword << endl;
         }
     }
     
